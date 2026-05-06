@@ -1,0 +1,314 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-light: #f9fafb;
+    --sidebar-bg: #f3f4f6;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+}
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 480px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+.btn-add {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-add:hover {
+    background: #fdfdfd;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.library-section {
+    margin-top: 32px;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+header h1 span {
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.workspace-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+/* UI Elements */
+.drop-zone {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 20px 20px;
+    transition: all 0.3s ease;
+}
+drop-zone-content{
+    font-size: 10px;
+}
+
+.drop-zone:hover {
+    border-color: var(--primary-color);
+    background: #f5f3ff;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.full-width { width: 100%; }
+
+.quiz-config-card {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+/* Quiz Items */
+.question-item {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.btn-submit {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Container for the buttons */
+.file-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Base style for text-based buttons */
+.text-btn {
+    background: none;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* Download Button: Professional Blue */
+.download-btn {
+    color: #4f46e5;
+}
+
+.download-btn:hover {
+    background-color: #eef2ff;
+    color: #4338ca;
+}
+
+/* Delete Button: Subtle Red */
+.delete-btn {
+    color: #9ca3af; /* Starts gray to be less distracting */
+}
+
+.delete-btn:hover {
+    background-color: #fef2f2;
+    color: #dc2626; /* Turns red on hover for warning */
+}
+
+/* Ensure the file name doesn't get squashed by the text buttons */
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+}
+
+.file-name-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+/* Container for alignment */
+.file-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Base style for text buttons */
+.text-btn {
+    border: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+/* Download Button: Solid Blue style */
+.download-btn {
+    background-color: #ebf5ff;
+    color: #007bff;
+}
+
+.download-btn:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Delete Button: Solid Red style */
+.delete-btn {
+    background-color: #fff5f5;
+    color: #e03131;
+}
+
+.delete-btn:hover {
+    background-color: #e03131;
+    color: #ffffff;
+}
+
+/* Sidebar Item Hover logic */
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.file-item:hover {
+    border-color: #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.file-item.active {
+    background-color: #f1f3f5;
+    border-color: #ced4da;
+}
